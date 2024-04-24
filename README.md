@@ -8,6 +8,7 @@ Backend realizado en node js sin frameworks para manejar el servidor. NO pude te
 
 - Node.js (versión mayor a 17)
 - npm
+- Docker / servidor de mysql
 
 ## Instalación
 
