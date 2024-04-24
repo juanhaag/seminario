@@ -1,0 +1,23 @@
+{
+  "name": "seminario-tp-diagnostico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanhaag/seminario.git"
+  },
+  "author": "Juan Haag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanhaag/seminario/issues"
+  },
+  "homepage": "https://github.com/juanhaag/seminario#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "mysql": "^2.18.1"
+  }
+}
