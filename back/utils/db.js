@@ -5,7 +5,7 @@ const connectionDetails = {
   host: 'localhost',
   database: 'seminario',
   user: 'root',
-  password: ''
+  password: 'password'
 };
 
 let connection; 

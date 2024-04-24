@@ -10,16 +10,15 @@ const server = http.createServer((req, res) => {
 
     bodyParser.json()(req, res, async () => {
         try {
-            // Rutas para crear y obtener usuarios
             if (method === 'POST' && url.pathname === '/users') {
                 await userController.createUser(req, res);
             } else if (method === 'GET' && url.pathname === '/users') {
-            } else if (method === 'GET' && url.pathname.startsWith('/users/') && url.pathname.includes('/get_contact')) {
             } else if (method === 'POST' && url.pathname.startsWith('/users/') && url.pathname.endsWith('/contacts')) {
                 await contactController.createContact(req, res);
-            } else if (method === 'GET' && url.pathname.startsWith('/users/') && url.pathname.includes('/get_contacts')) {
+            } else if (method === 'GET' && url.pathname.startsWith('/users/') && url.pathname.endsWith('/get_contacts')) {
                 await contactController.getAllContacts(req, res);
-            } else if (method === 'PUT' && url.pathname.startsWith('/users/') && url.pathname.includes('/contacts/')) {
+            } else if (method === 'PUT' && url.pathname.startsWith('/users/') && url.pathname.includes('/update/')) {
+                                await contactController.updateContact(req, res);
             } else if (method === 'DELETE' && url.pathname.startsWith('/users/') && url.pathname.includes('/contacts/')) {
             } else {
                 res.writeHead(404, { 'Content-Type': 'application/json' });

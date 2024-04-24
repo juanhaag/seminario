@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Usuario y Lista de Contactos</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .center-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; 
+      background-color: #f0f0f0; 
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center mb-4">Formulario de Creación de Usuario</h2>
+      <form id="createForm">
+        <div class="form-group">
+          <label for="username">Nombre de Usuario</label>
+          <input type="text" class="form-control" id="username" placeholder="Ingrese su nombre de usuario" value="test" disabled>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-12">
+      <h2 class="text-center mb-4">Formulario de Creación de Contacto</h2>
+      <form id="createContactForm">
+        <div class="form-group">
+          <label for="contactName">Nombre del Contacto</label>
+          <input type="text" class="form-control" id="contactName" placeholder="Ingrese el nombre del contacto">
+          <label for="contactPhone">Telefono</label>
+          <input type="text" class="form-control" id="contactPhone" placeholder="Ingrese el telefono del contacto">
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar Contacto</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-12">
+      <h2 class="text-center mb-4">Lista de Contactos</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="contactList">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
