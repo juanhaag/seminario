@@ -55,6 +55,16 @@ CREATE TABLE contacts (
   FOREIGN KEY (user_id) REFERENCES users(id)  
 );
 ```
+```sql
+INSERT INTO users (username) VALUES ('pepe');
+
+SET @user_id = LAST_INSERT_ID();
+
+INSERT INTO contacts (name, phone_number, user_id) VALUES ('Contacto 1', '123456789', @user_id);
+INSERT INTO contacts (name, phone_number, user_id) VALUES ('Contacto 2', '987654321', @user_id);
+INSERT INTO contacts (name, phone_number, user_id) VALUES ('Contacto 3', '555555555', @user_id);
+
+```
 
 ## Correr proyecto
 ```bash 
@@ -86,6 +96,14 @@ curl -X POST \
 ```
 #### Editar contacto
 
+```bash
+curl -X GET \
+  -H "Content-Type: application/json" \
+  -d '{
+        "userId": 1
+      }' \
+  http://localhost:3000/users/get_contacts/
+```
 ```bash
 curl -X PUT \
   -H "Content-Type: application/json" \
